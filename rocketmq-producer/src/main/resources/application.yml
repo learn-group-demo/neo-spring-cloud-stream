@@ -1,0 +1,30 @@
+spring:
+  application:
+    name: stream-rocketmq-producer-application
+  cloud:
+    # Spring Cloud Stream ?????? BindingServiceProperties ?
+    stream:
+      # Binding ?????? BindingProperties Map
+      bindings:
+        erbadagang-output:
+          destination: ERBADAGANG-TOPIC-01 # ???????? RocketMQ Topic
+          content-type: application/json # ????????? JSON
+
+        trek-output:
+          destination: TREK-TOPIC-01 # ???????? RocketMQ Topic
+          content-type: application/json # ????????? JSON
+      # Spring Cloud Stream RocketMQ ???
+      rocketmq:
+        # RocketMQ Binder ?????? RocketMQBinderConfigurationProperties ?
+        binder:
+          name-server: 101.133.227.13:9876 # RocketMQ Namesrv ??
+        # RocketMQ ??? Binding ?????? RocketMQBindingProperties Map
+        bindings:
+          erbadagang-output:
+            # RocketMQ Producer ?????? RocketMQProducerProperties ?
+            producer:
+              group: test # ?????
+              sync: true # ???????????? false ???
+
+server:
+  port: 18080
