@@ -1,4 +1,4 @@
-package com.example.rocketmqproducer.message;
+package com.neoderm.rocketmq.producer.message;
 
 import org.springframework.cloud.stream.annotation.Output;
 import org.springframework.messaging.MessageChannel;
