@@ -17,7 +17,7 @@ spring:
       rocketmq:
         # RocketMQ Binder ?????? RocketMQBinderConfigurationProperties ?
         binder:
-          name-server: 101.133.227.13:9876 # RocketMQ Namesrv ??
+          name-server: 10.211.55.6:9876 # RocketMQ Namesrv ??
         # RocketMQ ??? Binding ?????? RocketMQBindingProperties Map
         bindings:
           erbadagang-output:
@@ -25,6 +25,5 @@ spring:
             producer:
               group: test # ?????
               sync: true # ???????????? false ???
-
 server:
   port: 18080

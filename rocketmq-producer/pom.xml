@@ -11,8 +11,8 @@
         <maven.compiler.target>1.8</maven.compiler.target>
         <maven.compiler.source>1.8</maven.compiler.source>
         <spring.boot.version>2.2.4.RELEASE</spring.boot.version>
-        <spring-cloud.version>2021.0.1</spring-cloud.version>
-        <spring.cloud.alibaba.version>2.2.0.RELEASE</spring.cloud.alibaba.version>
+        <spring-cloud.version>Hoxton.SR7</spring-cloud.version>
+        <spring.cloud.alibaba.version>2.2.1.RELEASE</spring.cloud.alibaba.version>
     </properties>
     <dependencies>
         <dependency>
