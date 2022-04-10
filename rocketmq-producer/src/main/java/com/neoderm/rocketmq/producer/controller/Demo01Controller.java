@@ -1,7 +1,9 @@
 package com.neoderm.rocketmq.producer.controller;
 
+import com.alibaba.fastjson.JSON;
 import com.neoderm.rocketmq.producer.message.Demo01Message;
 import com.neoderm.rocketmq.producer.message.MySource;
+import lombok.extern.slf4j.Slf4j;
 import org.apache.rocketmq.common.message.MessageConst;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -14,6 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.Random;
 
+@Slf4j
 @RestController
 @RequestMapping("/demo01")
 public class Demo01Controller {
@@ -32,6 +35,7 @@ public class Demo01Controller {
         Message<Demo01Message> springMessage = MessageBuilder.withPayload(message)
                 .build();
         // <4>发送消息
+        log.info("\nproducer send topic: ERBADAGANG-TOPIC-01 group: test message: {}", JSON.toJSONString(springMessage));
         return mySource.erbadagangOutput().send(springMessage);
     }
 

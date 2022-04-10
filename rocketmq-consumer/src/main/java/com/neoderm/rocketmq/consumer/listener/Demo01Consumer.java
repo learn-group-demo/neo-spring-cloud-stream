@@ -14,7 +14,7 @@ public class Demo01Consumer {
 
     @StreamListener(MySink.ERBADAGANG_INPUT)
     public void onMessage(@Payload Demo01Message message) {
-        logger.info("[onMessage][线程编号:{} 消息内容：{}]", Thread.currentThread().getId(), message);
+        logger.info("\nconsumer topic: ERBADAGANG-TOPIC-01 group: NEW-erbadagang-consumer-group-ERBADAGANG-TOPIC-01 \n [onMessage][线程编号:{} 消息内容：{}]", Thread.currentThread().getId(), message);
     }
 
     @StreamListener(MySink.TREK_INPUT)
