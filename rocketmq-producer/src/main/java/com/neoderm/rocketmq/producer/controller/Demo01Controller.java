@@ -5,13 +5,13 @@ import com.neoderm.rocketmq.producer.message.MySource;
 import org.apache.rocketmq.common.message.MessageConst;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.messaging.Message;
 import org.springframework.messaging.support.MessageBuilder;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import javax.annotation.Resource;
 import java.util.Random;
 
 @RestController
@@ -20,7 +20,7 @@ public class Demo01Controller {
 
     private Logger logger = LoggerFactory.getLogger(getClass());
 
-    @Resource
+    @Autowired
     private MySource mySource;
 
     @GetMapping("/send")
