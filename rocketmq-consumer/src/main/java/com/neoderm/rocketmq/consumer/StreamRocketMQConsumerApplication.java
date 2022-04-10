@@ -7,10 +7,10 @@ import org.springframework.cloud.stream.annotation.EnableBinding;
 
 @SpringBootApplication
 @EnableBinding(MySink.class)
-public class ConsumerApplication {
+public class StreamRocketMQConsumerApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(ConsumerApplication.class, args);
+        SpringApplication.run(StreamRocketMQConsumerApplication.class, args);
     }
 
 }
