@@ -5,6 +5,6 @@ import org.springframework.messaging.MessageChannel;
 
 public interface MySource {
 
-    @Output("stream-kafka-demo-output")
+    @Output("stream-kafka-output")
     MessageChannel kafkaDemooutput();
 }
