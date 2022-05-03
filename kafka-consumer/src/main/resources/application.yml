@@ -1,17 +1,18 @@
 server:
   port: 7889
 spring:
-  application:
-    name: kafka-consumer
   cloud:
     stream:
       bindings:
-        #input是接收，注意这里不能再像前面一样写output了
         stream-kafka-demo-input:
           destination: stream-kafka-topic
-          group: stream-kafka-group
-      kafka:
-        binder:
-          brokers: 10.211.55.6:9092
-          zk-nodes: 10.211.55.6:2181
-          auto-create-topics: true
+          group: stream-kafka-grouup
+      default-binder: kafka
+  kafka:
+    bootstrap-servers: 10.211.55.6:9092
+    consumer:
+      enable-auto-commit: true
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.ByteArraySerializer
+      value-serializer: org.apache.kafka.common.serialization.ByteArraySerializer
+
