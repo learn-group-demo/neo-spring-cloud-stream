@@ -9,14 +9,9 @@ spring:
         #input是接收，注意这里不能再像前面一样写output了
         stream-kafka-demo-input:
           destination: stream-kafka-topic
+          group: stream-kafka-group
       kafka:
         binder:
           brokers: 10.211.55.6:9092
           zk-nodes: 10.211.55.6:2181
           auto-create-topics: true
-        bindings:
-          stream-kafka-demo-input:
-            # RocketMQ Consumer 配置项，对应 RocketMQConsumerProperties 类
-            consumer:
-              enabled: true # 是否开启消费，默认为 true
-              broadcasting: false # 是否使用广播消费，默认为 false 使用集群消费，如果要使用广播消费值设成true。
