@@ -17,6 +17,12 @@ spring:
           destination: stream-kafka-topic
           # 消息发送的格式，接收端不用指定格式，但是发送端要
           content-type: text/plain
+          producer:
+            use-native-encoding: true
+            partitionCount: 5
+            configuration:
+              key.serializer: org.apache.kafka.common.serialization.StringSerializer
+              value.serializer: org.apache.kafka.common.serialization.ByteArraySerializer
       kafka:
         binder:
           # Kafka的消息中间件服务器
