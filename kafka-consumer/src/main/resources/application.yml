@@ -1,5 +1,5 @@
 server:
-  port: 7890
+  port: ${random.int[10000,19999]}
 spring:
   cloud:
     stream:
