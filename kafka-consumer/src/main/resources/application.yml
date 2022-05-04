@@ -6,7 +6,8 @@ spring:
       bindings:
         stream-kafka-demo-input:
           destination: stream-kafka-topic
-          group: stream-kafka-group
+          # 实现广播模式，consumer订阅相同的topic创建不同的组
+          group: stream-kafka-group02
       default-binder: kafka
   kafka:
     bootstrap-servers: 10.211.55.6:9092
