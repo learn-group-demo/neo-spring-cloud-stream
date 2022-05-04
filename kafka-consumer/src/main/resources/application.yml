@@ -1,12 +1,12 @@
 server:
-  port: 7889
+  port: 7890
 spring:
   cloud:
     stream:
       bindings:
         stream-kafka-demo-input:
           destination: stream-kafka-topic
-          group: stream-kafka-grouup
+          group: stream-kafka-group
       default-binder: kafka
   kafka:
     bootstrap-servers: 10.211.55.6:9092
