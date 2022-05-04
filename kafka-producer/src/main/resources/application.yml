@@ -8,7 +8,6 @@ spring:
       bindings:
         stream-kafka-output:
           destination: stream-kafka-topic
-#          group: stream-kafka-group
       default-binder: kafka
   kafka:
     bootstrap-servers: 10.211.55.6:9092
